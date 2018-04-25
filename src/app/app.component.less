@@ -21,6 +21,8 @@
         position: fixed;
         top: 10px;
         right: 10px;
+        cursor: pointer;
+
         &.active {
             transition: transform 500ms cubic-bezier(.85,-0.48,.26,.67);
             transform: rotate(360deg);
@@ -107,5 +109,17 @@
     p {
         font-size: 2em;
         text-align: center;
+    }
+}
+
+.alarm-section {
+    p {
+        font-size: 1.3em;
+        text-align: center;
+    }
+    background-color: #F88 !important;
+    border-color: #F88 !important;     
+    &:hover {
+        border-color: #F22 !important; 
     }
 }
