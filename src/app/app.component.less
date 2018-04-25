@@ -1,0 +1,77 @@
+h1 {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 0.4em 0;
+    margin: 0;
+    background-color: #54a4ff;
+    color: white;
+}
+
+.app-wrapper {
+    min-width: 320px;
+    max-width: 950px;
+    width: 66%;
+    margin: 1em auto;
+    overflow: auto;
+    
+    
+    .section-wrapper {
+        margin: 2em 0;
+        padding: 1em;
+        background-color: #EEE;
+        overflow: auto;
+        border: 2px solid #EEE;
+        transition: border 0.2s ease-in;
+        &:hover {
+            border: 2px solid #AAA;
+        }
+        
+        h3 {
+            margin: 0;
+            display: inline-block;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .check-section {
+
+        h3 {
+            margin-bottom: 1em;
+        }
+
+        @btn-color: #009ED8;
+        button {
+            cursor: pointer;
+            width: 125px;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            position: relative;
+            padding: .6em 1.4em;
+            background: white;
+            border: 2px solid @btn-color;
+            color: black;
+            transition: .2s;
+            font-size: 0.9em;
+            &:hover {
+                background: darken(@btn-color, 10%);
+            }
+            &:focus {
+                background: darken(@btn-color, 30%);
+                outline: none;
+            }
+        }
+        
+    }
+
+    .temp-section {
+        p {
+            float: right;
+            font-size: 1.5em;
+            margin-right: 10%;
+        }
+    }
+}
