@@ -16,6 +16,9 @@
     <div *ngIf="isDanger()" class="section-wrapper alarm-section">
       <h3>ALARME</h3>
       <P>Pericolo {{LastAlertSec}} secondi fa a {{LastAlertDegree}}°</P>
+      <button 
+      (click)="sendUpdate('?alarm=1')"
+      class="danger-btn" [ngClass]="{'active': btnTempActive(0)}">SUONA L'ALARME</button>      
     </div>
     <div class="section-wrapper temp-section">
       <h3>TEMPERATURA</h3>
@@ -25,9 +28,9 @@
       <h3>CONTROLLO TEMPERATURA</h3>
       <img [src]="imageTemp()">
       <div class="btn-wrapper">
-        <button [ngClass]="{'active': btnTempActive(0)}">ACCESA</button>
-        <button [ngClass]="{'active': btnTempActive(1)}">SPENTA</button>
-        <button [ngClass]="{'active': btnTempActive(2)}">AUTO</button>
+        <button (click)="sendUpdate('?lamp1=0')" [ngClass]="{'active': btnTempActive(0)}">ACCESA</button>
+        <button (click)="sendUpdate('?lamp1=1')" [ngClass]="{'active': btnTempActive(1)}">SPENTA</button>
+        <button (click)="sendUpdate('?lamp1=2')" [ngClass]="{'active': btnTempActive(2)}">AUTO</button>
       </div>
 
     </div>
@@ -39,9 +42,9 @@
       <h3>CONTROLLO LUMINOSIT&Agrave;</h3>
       <img [src]="imageLum()">
       <div class="btn-wrapper">
-        <button [ngClass]="{'active': btnLumActive(0)}">ACCESA</button>
-        <button [ngClass]="{'active': btnLumActive(1)}">SPENTA</button>
-        <button [ngClass]="{'active': btnLumActive(2)}">AUTO</button>
+        <button (click)="sendUpdate('?lamp2=0')" [ngClass]="{'active': btnLumActive(0)}">ACCESA</button>
+        <button (click)="sendUpdate('?lamp2=1')" [ngClass]="{'active': btnLumActive(1)}">SPENTA</button>
+        <button (click)="sendUpdate('?lamp2=2')" [ngClass]="{'active': btnLumActive(2)}">AUTO</button>
       </div>
 
     </div>

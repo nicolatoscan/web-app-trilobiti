@@ -68,42 +68,42 @@
     }
     .btn-wrapper {
         display: flex;
-
-        button {
-            cursor: pointer;
-            flex-grow: 1;     
-            margin: 5px;    
-            display: inline-block;
-            -webkit-font-smoothing: antialiased;
-            position: relative;
-            padding: .6em;
-            background: white;
-            border: 2px solid @btn-color;
-            color: black;
-            transition: .2s;
-            font-size: 0.9em;
-            &.active {
-                color: white;
-                background: @btn-color - 40%;
-            }
-            &:hover {
-                color: white;
-                background: @btn-color;
-            }
-            &:active {
-                color: white;
-                background: @btn-color + 20%;
-            }
-        }
     }
-
 }
-        img {
-            height: 100px;
-            width: 100%;
-            margin: 0.5em;;
-            object-fit: scale-down;
-        }
+
+button {
+    cursor: pointer;
+    flex-grow: 1;     
+    margin: 5px;    
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    padding: .6em;
+    background: white;
+    border: 2px solid @btn-color;
+    color: black;
+    transition: .2s;
+    font-size: 0.9em;
+    &.active {
+        color: white;
+        background: @btn-color - 40%;
+    }
+    &:hover {
+        color: white;
+        background: @btn-color;
+    }
+    &:active {
+        color: white;
+        background: @btn-color + 20%;
+    }
+}
+
+img {
+    height: 100px;
+    width: 100%;
+    margin: 0.5em;;
+    object-fit: scale-down;
+}
 
 .temp-section {
     p {
@@ -113,6 +113,24 @@
 }
 
 .alarm-section {
+    button {
+        margin-top: 0.7em; 
+        border: 2px solid #F22;
+        &.active {
+            color: white;
+            background: #F22 - 40%;
+        }
+        &:hover {
+            color: white;
+            background: #F22;
+        }
+        &:active {
+            color: white;
+            background: #F22 + 20%;
+        }
+    }
+
+    text-align: center;
     p {
         font-size: 1.3em;
         text-align: center;

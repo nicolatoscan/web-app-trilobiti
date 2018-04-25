@@ -8,7 +8,7 @@ export class DatasourceService {
 
   constructor(public http: HttpClient) { }
 
-  private url = 'http://nicolatoscan.altervista.org/ard.php?';
+  private url = 'http://nicolatoscan.altervista.org/ard.php';
 
   updateData(par: string): Observable<string[]> {
     console.log(this.url.concat(par));

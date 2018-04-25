@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   public tempLampStatus = 2;
   public lampLumOn = false;
   public lumLampStatus = 2;
-  
+
   public currentTemp = 20;
   public currentLum = false;
   public LastAlertSec = 3500;
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 
 
   public isReloading = false;
-  
+
   constructor(public datasource: DatasourceService) { }
 
   ngOnInit() {
@@ -35,10 +35,8 @@ export class AppComponent implements OnInit {
       this.tempLampStatus = +data[1];
       this.lampLumOn = data[2] === '1';
       this.lumLampStatus = +data[3];
- 
       this.currentTemp = +data[4];
       this.currentLum = data[5] === '1';
- 
       this.LastAlertSec = +data[6];
       this.LastAlertDegree = +data[7];
 
@@ -73,5 +71,13 @@ export class AppComponent implements OnInit {
       this.isReloading = false;
     }, 1100);
     this.updateUX();
+  }
+
+  public sendUpdate(par: string) {
+    this.isReloading = true;
+    setTimeout(() => {
+      this.isReloading = false;
+    }, 1100);
+    this.updateUX(par);
   }
 }
